@@ -607,6 +607,9 @@ html , body {
     overflow-x: hidden;
 }
 @media (max-width: 768px) {
+    section {
+        scroll-margin-top: 180px;
+    }
     .years-container {
         grid-template-columns: 1fr 1fr;
         gap: 15px;
