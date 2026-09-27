@@ -660,6 +660,17 @@ body {
     width: 100%;
     margin-top: 40px;
 }
+
+.years-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.courses-container {
+    width: 100%;
+    margin-top: 40px;
+}
 }
 
 @media (max-width: 500px) {
