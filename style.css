@@ -648,6 +648,12 @@ body {
         
     }
 
+    .courses-container {
+    width: 100%;
+    margin-top: 40px;
+    clear: both;
+}
+
     /* Navigation scroll */
     section {
         scroll-margin-top: 180px;
