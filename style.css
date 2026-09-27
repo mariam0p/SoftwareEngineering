@@ -577,17 +577,7 @@ body {
 }
 
 
-    .hero-container {
-        flex-direction: column;
-    }
-
-    .study-system-card {
-        width: 100%;
-    }
-
-    .hero-content h2 {
-        font-size: 35px;
-    }
+    
     @media (max-width: 768px) {
 
     .header-container {
@@ -605,48 +595,17 @@ body {
     .main-nav a {
         font-size: 16px;
     }
-}
-@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+    }
 
-    .header {
+    .study-system-card {
         width: 100%;
     }
 
-    .header-container {
-        flex-direction: column;
-        justify-content: center;
-        gap: 10px;
-        padding: 12px 15px;
-    }
-
-    .brand {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .brand h1 {
-        font-size: 18px;
-    }
-
-    .brand p {
-        font-size: 12px;
-        margin: 3px 0;
-    }
-
-    .brand span {
-        font-size: 11px;
-    }
-
-    .main-nav {
-        margin-right: 0;
-        transform: none;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .main-nav a {
-        font-size: 14px;
+    .hero-content h2 {
+        font-size: 35px;
     }
 }
+
 
