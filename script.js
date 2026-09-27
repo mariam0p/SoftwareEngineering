@@ -537,7 +537,9 @@ function showYear(year) {
 
     // الكمبيوتر: النظام القديم
     let desktopContainer = document.getElementById("courses-container");
+    if (window.innerWidth > 768) {
     desktopContainer.innerHTML = html;
+}
 
     // الجوال: إظهار المحتوى تحت البطاقة المختارة
     if (window.innerWidth <= 768) {
