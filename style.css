@@ -619,4 +619,10 @@ html , body {
     }
 }
 
+htmL {
+    scroll-behavior: smooth;
+}
+section {
+    scroll-margin-top: 100PX;
+}
 
