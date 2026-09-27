@@ -572,57 +572,57 @@ body {
 }
 
 
-   @media (max-width: 768px) {
-
-    .header {
-        width: 85%;
-        right: 7.5%;
-        left: 7.5%;
-        border-radius: 0 0 12px 12px;
-    }
+    
+    @media (max-width: 768px) {
 
     .header-container {
         flex-direction: column;
-        gap: 12px;
-        padding: 12px 10px 15px;
+        gap: 15px;
         text-align: center;
-    }
-
-    .brand {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .brand h1 {
-        font-size: 24px;
-        font-weight: 800;
-        margin-bottom: 3px;
-    }
-
-    .brand p {
-        font-size: 16px;
-        margin-bottom: 3px;
-    }
-
-    .brand span {
-        font-size: 15px;
-        display: block;
     }
 
     .main-nav {
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        gap: 25px;
-        margin: 0;
-        transform: none;
         flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
 
     .main-nav a {
         font-size: 16px;
-        white-space: nowrap;
+    }
+    .hero-container {
+        flex-direction: column;
+    }
+
+    .study-system-card {
+        width: 100%;
+    }
+
+    .hero-content h2 {
+        font-size: 35px;
+    }
+}
+
+html , body {
+    overflow-x: hidden;
+}
+@media (max-width: 768px) {
+    section {
+        scroll-margin-top: 180px;
+    }
+    .years-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    .header-container{
+        padding-right: 15px;
+        padding-left: 5px;
+    }
+}
+
+@media (max-width: 500px) {
+    .years-container {
+        grid-template-columns: 1fr;
     }
 }
 
