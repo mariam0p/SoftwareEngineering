@@ -559,9 +559,9 @@ function showYear(year) {
         }
 
         let content = document.createElement("div");
-        content.className = "mobile-year-content";
-        content.innerHTML = html;
+content.className = "mobile-year-content";
+content.innerHTML = html;
 
-        clickedCard.after(content);
+clickedCard.appendChild(content);
     }
 }

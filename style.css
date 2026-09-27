@@ -674,6 +674,11 @@ body {
 #courses.courses-container{
     display: none;
 }
+.mobile-year-content {
+    width: 100%;
+    margin-top: 30px;
+    text-align: right;
+}
 }
 
 @media (max-width: 500px) {
