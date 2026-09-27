@@ -504,9 +504,7 @@ cards.forEach(card => {
 
 // دالة فتح السنة
 
-function showYear(year){
-
-    let container = document.getElementById("courses-container");
+function showYear(year) {
 
     let data = studyPlan[year];
 
@@ -514,33 +512,56 @@ function showYear(year){
         <h2>${data.title}</h2>
     `;
 
-
-    for(let semester in data.semesters){
+    for (let semester in data.semesters) {
 
         html += `
-        <div class="semester-card">
-            <h3>${semester}</h3>
+            <div class="semester-card">
+                <h3>${semester}</h3>
         `;
-
 
         data.semesters[semester].forEach(course => {
 
             html += `
-            <div class="course-card">
-                <h4>${course.name}</h4>
-                <div>رمز المادة:${course.code}</div>
-                <span>عدد الساعات المعتمدة:${course.hours}ساعات</span>
-                <p>${course.desc}</p>
-            </div>
+                <div class="course-card">
+                    <h4>${course.name}</h4>
+                    <div>رمز المادة: ${course.code}</div>
+                    <span>عدد الساعات المعتمدة: ${course.hours} ساعات</span>
+                    <p>${course.desc}</p>
+                </div>
             `;
 
         });
 
-
         html += `</div>`;
     }
 
+    // الكمبيوتر: النظام القديم
+    let desktopContainer = document.getElementById("courses-container");
+    desktopContainer.innerHTML = html;
 
-    container.innerHTML = html;
+    // الجوال: إظهار المحتوى تحت البطاقة المختارة
+    if (window.innerWidth <= 768) {
 
+        let cards = document.querySelectorAll(".year-card");
+
+        cards.forEach(card => {
+            card.classList.remove("mobile-open");
+        });
+
+        let clickedCard = cards[year - 1];
+
+        clickedCard.classList.add("mobile-open");
+
+        let oldContent = document.querySelector(".mobile-year-content");
+
+        if (oldContent) {
+            oldContent.remove();
+        }
+
+        let content = document.createElement("div");
+        content.className = "mobile-year-content";
+        content.innerHTML = html;
+
+        clickedCard.after(content);
+    }
 }
