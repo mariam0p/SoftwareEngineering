@@ -655,10 +655,8 @@ body {
         scroll-margin-top: 180px;
     }
 
-    .courses-container {
-    display: block;
-    width: 100%;
-    margin-top: 40px;
+    #courses-container {
+    display: none;
 }
 
 .years-container {
@@ -667,12 +665,9 @@ body {
     gap: 15px;
 }
 
-.courses-container {
+.mobile-year-content {
     width: 100%;
-    margin-top: 40px;
-}
-#courses.courses-container{
-    display: none;
+    margin: 20px 0 30px;
 }
 }
 
