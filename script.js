@@ -540,7 +540,10 @@ function showYear(year) {
     desktopContainer.innerHTML = html;
 
     // الجوال: إظهار المحتوى تحت البطاقة المختارة
+    clickedCard.appendChild(content);
     if (window.innerWidth <= 768) {
+        desktopContainer.innerHTML = html ;
+    }
 
         let cards = document.querySelectorAll(".year-card");
 
@@ -564,4 +567,3 @@ content.innerHTML = html;
 
 clickedCard.appendChild(content);
     }
-}
