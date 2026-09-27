@@ -671,6 +671,9 @@ body {
     width: 100%;
     margin-top: 40px;
 }
+#courses.courses-container{
+    display: none;
+}
 }
 
 @media (max-width: 500px) {
