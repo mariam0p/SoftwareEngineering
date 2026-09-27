@@ -573,6 +573,7 @@ body {
 
 
    /* Responsive */
+/* Responsive */
 @media (max-width: 768px) {
 
     /* Header */
@@ -619,6 +620,7 @@ body {
         white-space: nowrap;
     }
 
+
     /* Hero */
     .hero-container {
         flex-direction: column;
@@ -640,48 +642,51 @@ body {
         width: 100%;
     }
 
+
     /* Study Plan */
     .years-container {
-        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
         width: 100%;
-        margin-top: 30px;
-        
     }
 
-    
+    /* إخفاء الحاوية الخاصة بالكمبيوتر على الجوال */
+    #courses-container {
+        display: none;
+    }
+
+    /* محتوى السنة المختارة */
+    .mobile-year-content {
+        width: 100%;
+        margin: 20px 0 30px;
+    }
+
 
     /* Navigation scroll */
     section {
         scroll-margin-top: 180px;
     }
-
-    #courses-container {
-    display: none;
 }
 
-.years-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
 
-.mobile-year-content {
-    width: 100%;
-    margin: 20px 0 30px;
-}
-}
-
+/* Small screens */
 @media (max-width: 500px) {
 
     .years-container {
-        grid-template-columns: 1fr;
+        width: 100%;
     }
+
 }
 
+
+/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
+
+/* Prevent horizontal overflow */
 html,
 body {
     overflow-x: hidden;
