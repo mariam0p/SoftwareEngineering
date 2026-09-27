@@ -614,6 +614,10 @@ html , body {
         grid-template-columns: 1fr 1fr;
         gap: 15px;
     }
+    .header-container{
+        padding-right: 15px;
+        padding-left: 5px;
+    }
 }
 
 @media (max-width: 500px) {
