@@ -12,16 +12,15 @@ body {
 
 /* Header */
 .header {
-    background:#142943  ;
+    background: #142943;
     border-bottom: 1px solid #eee;
-    padding: 10px 7%;
-    position: fixed ;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
-    width: 100%;
-    padding: 0;
+    width: auto;
     margin: 0;
-    
 }
 
 .header-container {
