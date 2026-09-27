@@ -535,35 +535,34 @@ function showYear(year) {
         html += `</div>`;
     }
 
-    // الكمبيوتر: النظام القديم
+    // الكمبيوتر فقط
     let desktopContainer = document.getElementById("courses-container");
-    desktopContainer.innerHTML = html;
 
-    // الجوال: إظهار المحتوى تحت البطاقة المختارة
-    clickedCard.appendChild(content);
-    if (window.innerWidth <= 768) {
-        desktopContainer.innerHTML = html ;
+    if (window.innerWidth > 768) {
+        desktopContainer.innerHTML = html;
     }
 
-        let cards = document.querySelectorAll(".year-card");
+    // الجوال فقط
+    if (window.innerWidth <= 768) {
 
-        cards.forEach(card => {
-            card.classList.remove("mobile-open");
-        });
-
-        let clickedCard = cards[year - 1];
-
-        clickedCard.classList.add("mobile-open");
-
+        // حذف المحتوى السابق
         let oldContent = document.querySelector(".mobile-year-content");
 
         if (oldContent) {
             oldContent.remove();
         }
 
-        let content = document.createElement("div");
-content.className = "mobile-year-content";
-content.innerHTML = html;
+        let cards = document.querySelectorAll(".year-card");
 
-clickedCard.appendChild(content);
+        let clickedCard = cards[year - 1];
+
+        let content = document.createElement("div");
+
+        content.className = "mobile-year-content";
+
+        content.innerHTML = html;
+
+        // وضع المحتوى مباشرة تحت البطاقة
+        clickedCard.after(content);
     }
+}
