@@ -40,9 +40,6 @@ body {
    
 }
 
-/*.brand img {
-    width: 55px;
-}*/
 
 .brand h1 {
     font-size: 20px;
@@ -605,6 +602,10 @@ body {
     .hero-content h2 {
         font-size: 35px;
     }
+}
+
+html , body {
+    overflow-x: hidden;
 }
 
 
